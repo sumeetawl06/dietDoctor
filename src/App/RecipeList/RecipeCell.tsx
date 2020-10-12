@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {FlatList, Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {Icon} from 'react-native-elements';
+import {Icon, SearchBar} from 'react-native-elements';
 import StarRating from '../StarRating/star-rating';
 import {assertLeafType} from 'graphql';
+import ImageLoad from 'react-native-image-placeholder';
 
 export function RecipeCell(props) {
 
@@ -32,11 +33,17 @@ export function RecipeCell(props) {
     </View>
 
     return (
-        <ImageBackground
-            source={require('./dish1.png')}
+        <View
             style={ styles.container }
-            imageStyle={{ borderRadius: 4}}
         >
+            <ImageLoad
+                source={{uri: 'https://i.dietdoctor.com'+data.images.hz}}
+                style={{
+                    width: '100%',
+                    height: '100%',
+                    alignSelf: 'center',
+                }}
+            />
             <TouchableOpacity
                 onPress={() => {
                     alert('buttonTapped')
@@ -77,7 +84,7 @@ export function RecipeCell(props) {
                     marginBottom: 15
                 }}>
                     {/*<StarRating ratingObj={ratingObj}/>*/}
-                    {addRatingsView(3.5)}
+                    {addRatingsView(data.rating)}
                     <View style={{
                         borderRadius: 17.5,
                         backgroundColor: 'green',
@@ -117,7 +124,7 @@ export function RecipeCell(props) {
                 direction
             />
             </View>
-        </ImageBackground>
+        </View>
     )
 }
 

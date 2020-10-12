@@ -17,6 +17,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* dietdoctorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* dietdoctorTests.m */; };
 		3C3673E6058BC132E1AA53FF /* libPods-dietdoctor-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A58A706C37D20D760C6E89A6 /* libPods-dietdoctor-tvOS.a */; };
+		3E6C9EDC2534BCFB003CD722 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C9EDB2534BCFB003CD722 /* NutritionViewController.swift */; };
 		776DC3003E007990B46C113B /* libPods-dietdoctor-dietdoctorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF667DE2651DEFC6C0EB7EB /* libPods-dietdoctor-dietdoctorTests.a */; };
 		782BBE999CA40459BFCBE992 /* libPods-dietdoctor-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A270FEC58D1C55A5F6338DAF /* libPods-dietdoctor-tvOSTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -56,6 +57,8 @@
 		2D02E47B1E0B4A5D006451C7 /* dietdoctor-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dietdoctor-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* dietdoctor-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dietdoctor-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D3CADF139884FF35189809 /* Pods-dietdoctor-dietdoctorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dietdoctor-dietdoctorTests.release.xcconfig"; path = "Target Support Files/Pods-dietdoctor-dietdoctorTests/Pods-dietdoctor-dietdoctorTests.release.xcconfig"; sourceTree = "<group>"; };
+		3E6C9EDA2534BCFB003CD722 /* dietdoctor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dietdoctor-Bridging-Header.h"; sourceTree = "<group>"; };
+		3E6C9EDB2534BCFB003CD722 /* NutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
 		68A5F116B2E176D13DE69CDE /* Pods-dietdoctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dietdoctor.debug.xcconfig"; path = "Target Support Files/Pods-dietdoctor/Pods-dietdoctor.debug.xcconfig"; sourceTree = "<group>"; };
 		7CF667DE2651DEFC6C0EB7EB /* libPods-dietdoctor-dietdoctorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dietdoctor-dietdoctorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = dietdoctor/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				3E6C9EDB2534BCFB003CD722 /* NutritionViewController.swift */,
+				3E6C9EDA2534BCFB003CD722 /* dietdoctor-Bridging-Header.h */,
 			);
 			name = dietdoctor;
 			sourceTree = "<group>";
@@ -195,17 +200,15 @@
 				EE11FAA37416E5AE82C851E7 /* Pods-dietdoctor-tvOSTests.debug.xcconfig */,
 				A7E32C38B24A799B7509102A /* Pods-dietdoctor-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		F28E07AFC44C453A859B15AD /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -303,7 +306,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1200;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -641,6 +644,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E6C9EDC2534BCFB003CD722 /* NutritionViewController.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -683,6 +687,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 073BB713AB2CC75FAA72FF5B /* Pods-dietdoctor-dietdoctorTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -706,6 +711,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34D3CADF139884FF35189809 /* Pods-dietdoctor-dietdoctorTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = dietdoctorTests/Info.plist;
@@ -739,6 +745,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = dietdoctor;
+				SWIFT_OBJC_BRIDGING_HEADER = "dietdoctor-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -761,6 +768,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = dietdoctor;
+				SWIFT_OBJC_BRIDGING_HEADER = "dietdoctor-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

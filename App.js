@@ -24,13 +24,17 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import {RecipeListScreen} from './src/App/RecipeList/RecipeListScreen';
+import {Constants} from './src/Common/Constants';
 
 const App: () => React$Node = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-      </SafeAreaView>
+        <View style={{
+            width: '100%',
+            height: 45,
+            backgroundColor: Constants.colors.themeGreenColor
+        }}>
+        </View>
       <View style={{flex: 1}}>
         <RecipeListScreen/>
       </View>
