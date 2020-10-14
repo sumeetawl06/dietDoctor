@@ -15,12 +15,13 @@
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(navigateToNativeModule) {
+RCT_EXPORT_METHOD(navigateToNativeModule: (NSDictionary *)nutrition) {
   
   dispatch_async(dispatch_get_main_queue(), ^{
     AppDelegate *appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"DietDoctor" bundle:nil];
     DietChartViewController *vc = [sb instantiateViewControllerWithIdentifier:@"dietChart"];
+    vc.nutrition = nutrition;
     vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [appDelegate.rootNavigationController pushViewController:vc animated:true];
   });

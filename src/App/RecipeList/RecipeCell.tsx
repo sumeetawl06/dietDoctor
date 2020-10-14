@@ -35,9 +35,7 @@ export function RecipeCell(props) {
     </View>
 
     return (
-        <View
-            style={ styles.container }
-        >
+        <View style = { styles.container } >
             <ImageLoad
                 source={ data.images ? {uri: 'https://i.dietdoctor.com'+data.images.hz} : require('./dish1.png')}
                 style={{
@@ -49,7 +47,6 @@ export function RecipeCell(props) {
             >
                 <TouchableOpacity
                     onPress={() => {
-                        ReactBridgeManager.navigateToNativeModule()
                         ReactBridgeManager.getSystemLanguage( (lang) => {
                             alert(lang)
                         })
@@ -85,52 +82,84 @@ export function RecipeCell(props) {
                     backgroundColor: 'rgba(0,0,0,0.4)'
                 }}
             >
-                <Text style={{ marginVertical: 10,top: 10, left: 10, fontSize: 19, color: 'white', fontWeight: "bold"}}> {data.title}</Text>
                 <View style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    width: '100%',
+                    top: 5,
+                }}>
+                    <Text style={{ textAlign: 'left',left: 10, fontSize: 19, color: 'white', fontWeight: "bold"}}> {data.title}</Text>
+                </View>
+                <View style={{
+                    marginTop: 5,
                     flexDirection: 'row',
                     justifyContent: 'space-between',
                     marginBottom: 15
                 }}>
-                    {/*<StarRating ratingObj={ratingObj}/>*/}
                     {addRatingsView(data.rating)}
-                    <View style={{
-                        borderRadius: 17.5,
-                        backgroundColor: 'green',
-                        marginRight: 20,
-                        height: 35,
-                        minWidth:35,
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                    }}>
-                        <Text style={{
-                            color: 'white',
-                            fontSize: 15,
-                        }}> 4g </Text>
-                    </View>
+                    <TouchableOpacity
+                        onPress={ () => {
+                            ReactBridgeManager.navigateToNativeModule(data.nutrition.values)
+                        }}
+                    >
+                        <View style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            marginHorizontal: 10,
+                            justifyContent: 'flex-end'
+                        }}>
+                            <Text style={{
+                                color: 'white',
+                                fontSize: 15,
+                                fontWeight: 'bold',
+                            }}> Nutrition Details </Text>
+                            <Icon
+                                name={'keyboard-arrow-right'}
+                                color={'white'}
+                                size={30}
+                            />
+                        </View>
+                    </TouchableOpacity>
+                    {/*<View style={{*/}
+                    {/*    borderRadius: 17.5,*/}
+                    {/*    backgroundColor: 'green',*/}
+                    {/*    marginRight: 20,*/}
+                    {/*    height: 30,*/}
+                    {/*    minWidth:30,*/}
+                    {/*    alignItems: 'center',*/}
+                    {/*    justifyContent: 'center'*/}
+                    {/*}}>*/}
+                    {/*    <Text style={{*/}
+                    {/*        color: 'white',*/}
+                    {/*        fontSize: 15,*/}
+                    {/*    }}> 4g </Text>*/}
+                    {/*</View>*/}
                 </View>
-            <FlatList
-                style={{
-                    marginHorizontal: 10,
-                    bottom: 10
-                }}
-                horizontal={true}
-                data={category}
-                showsHorizontalScrollIndicator={false}
-                renderItem={ ({item}) => <View>
-                    <Text style={{
-                        borderColor: 'white',
-                        borderWidth: 1,
-                        padding: 5,
-                        marginHorizontal: 5,
-                        borderRadius: 15,
-                        fontWeight: 'bold',
-                        color: 'white'
-                    }}>
-                        {item}
-                    </Text>
-                </View>}
-                direction
-            />
+                <FlatList
+                    style={{
+                        marginHorizontal: 10,
+                        bottom: 10
+                    }}
+                    horizontal={true}
+                    data={category}
+                    showsHorizontalScrollIndicator={false}
+                    renderItem={ ({item}) => <View>
+                        <Text style={{
+                            borderColor: 'white',
+                            borderWidth: 1,
+                            padding: 5,
+                            marginHorizontal: 5,
+                            borderRadius: 15,
+                            fontWeight: 'bold',
+                            color: 'white'
+                        }}>
+                            {item}
+                        </Text>
+                    </View>}
+                    direction
+                />
+
             </View>
         </View>
     )

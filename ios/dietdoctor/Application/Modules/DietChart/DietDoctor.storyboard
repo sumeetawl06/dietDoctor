@@ -152,6 +152,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current system language is " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A06-xR-afS">
+                                <rect key="frame" x="65" y="655.5" width="284.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ehU-vq-LMj"/>
                         <color key="backgroundColor" red="0.098039215686274508" green="0.72156862745098038" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
@@ -159,15 +165,25 @@
                             <constraint firstItem="ehU-vq-LMj" firstAttribute="trailing" secondItem="2KC-SC-Sxy" secondAttribute="trailing" constant="363" id="5qa-oh-Omk"/>
                             <constraint firstItem="2KC-SC-Sxy" firstAttribute="top" secondItem="bUh-uF-gjL" secondAttribute="topMargin" constant="-24" id="KI4-MD-CvT"/>
                             <constraint firstItem="2KC-SC-Sxy" firstAttribute="leading" secondItem="bUh-uF-gjL" secondAttribute="leading" id="Lph-Uf-pfn"/>
+                            <constraint firstItem="A06-xR-afS" firstAttribute="top" secondItem="0N0-u9-ZCV" secondAttribute="bottom" constant="10" id="Lyf-ub-ZqI"/>
                             <constraint firstItem="0N0-u9-ZCV" firstAttribute="centerX" secondItem="bUh-uF-gjL" secondAttribute="centerX" id="YT5-wC-Ppe"/>
                             <constraint firstItem="ROS-s2-JJJ" firstAttribute="trailing" secondItem="ehU-vq-LMj" secondAttribute="trailing" id="dq1-QL-vOp"/>
                             <constraint firstItem="Twz-d7-8Zg" firstAttribute="leading" secondItem="ehU-vq-LMj" secondAttribute="leading" constant="35" id="jFw-uT-qWN"/>
                             <constraint firstItem="Twz-d7-8Zg" firstAttribute="top" secondItem="2KC-SC-Sxy" secondAttribute="bottom" constant="8" symbolic="YES" id="kCU-KS-79H"/>
                             <constraint firstItem="ROS-s2-JJJ" firstAttribute="leading" secondItem="ehU-vq-LMj" secondAttribute="leading" id="kbK-rp-Pi5"/>
                             <constraint firstItem="0N0-u9-ZCV" firstAttribute="centerY" secondItem="bUh-uF-gjL" secondAttribute="centerY" constant="-20" id="opB-a9-3Ma"/>
+                            <constraint firstItem="A06-xR-afS" firstAttribute="centerX" secondItem="bUh-uF-gjL" secondAttribute="centerX" id="rLx-Gx-SfK"/>
                             <constraint firstItem="ROS-s2-JJJ" firstAttribute="bottom" secondItem="ehU-vq-LMj" secondAttribute="bottom" id="yxl-uk-Y7L"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calories" destination="do1-cb-9q5" id="Iei-09-NlB"/>
+                        <outlet property="carbs" destination="KmQ-Pb-C8E" id="9K0-d5-E1N"/>
+                        <outlet property="fat" destination="NOY-W3-r0D" id="MAr-9d-kJH"/>
+                        <outlet property="fiber" destination="nwf-IR-NnI" id="7XT-wg-G80"/>
+                        <outlet property="languageLabel" destination="A06-xR-afS" id="sNt-mw-yOa"/>
+                        <outlet property="protein" destination="1yp-Sm-5b1" id="6vt-E2-YAT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZY-UX-N4V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
