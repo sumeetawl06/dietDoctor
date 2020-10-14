@@ -47,9 +47,7 @@ export function RecipeCell(props) {
             >
                 <TouchableOpacity
                     onPress={() => {
-                        ReactBridgeManager.getSystemLanguage( (lang) => {
-                            alert(lang)
-                        })
+                        alert('Make Favourite Clicked')
                     }}>
                     <View
                         style={{
