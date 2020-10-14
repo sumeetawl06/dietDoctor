@@ -18,6 +18,11 @@
 		2DCD954D1E0B4F2C00145EB5 /* dietdoctorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* dietdoctorTests.m */; };
 		3C3673E6058BC132E1AA53FF /* libPods-dietdoctor-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A58A706C37D20D760C6E89A6 /* libPods-dietdoctor-tvOS.a */; };
 		3E6C9EDC2534BCFB003CD722 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C9EDB2534BCFB003CD722 /* NutritionViewController.swift */; };
+		3E7B7194253623AA0097D54F /* ReactBridgeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B7193253623AA0097D54F /* ReactBridgeManager.m */; };
+		3E7B7196253624150097D54F /* DietChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B7195253624150097D54F /* DietChartViewController.swift */; };
+		3E7B719825362BF30097D54F /* diet_doctor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7B719725362BF30097D54F /* diet_doctor.png */; };
+		3E7B719A25362C8C0097D54F /* diet.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7B719925362C8C0097D54F /* diet.png */; };
+		3E7B719C2536357C0097D54F /* DietDoctor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7B719B2536357C0097D54F /* DietDoctor.storyboard */; };
 		776DC3003E007990B46C113B /* libPods-dietdoctor-dietdoctorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF667DE2651DEFC6C0EB7EB /* libPods-dietdoctor-dietdoctorTests.a */; };
 		782BBE999CA40459BFCBE992 /* libPods-dietdoctor-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A270FEC58D1C55A5F6338DAF /* libPods-dietdoctor-tvOSTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -59,6 +64,12 @@
 		34D3CADF139884FF35189809 /* Pods-dietdoctor-dietdoctorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dietdoctor-dietdoctorTests.release.xcconfig"; path = "Target Support Files/Pods-dietdoctor-dietdoctorTests/Pods-dietdoctor-dietdoctorTests.release.xcconfig"; sourceTree = "<group>"; };
 		3E6C9EDA2534BCFB003CD722 /* dietdoctor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dietdoctor-Bridging-Header.h"; sourceTree = "<group>"; };
 		3E6C9EDB2534BCFB003CD722 /* NutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
+		3E7B7192253623AA0097D54F /* ReactBridgeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactBridgeManager.h; sourceTree = "<group>"; };
+		3E7B7193253623AA0097D54F /* ReactBridgeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactBridgeManager.m; sourceTree = "<group>"; };
+		3E7B7195253624150097D54F /* DietChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietChartViewController.swift; sourceTree = "<group>"; };
+		3E7B719725362BF30097D54F /* diet_doctor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diet_doctor.png; sourceTree = "<group>"; };
+		3E7B719925362C8C0097D54F /* diet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diet.png; sourceTree = "<group>"; };
+		3E7B719B2536357C0097D54F /* DietDoctor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DietDoctor.storyboard; sourceTree = "<group>"; };
 		68A5F116B2E176D13DE69CDE /* Pods-dietdoctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dietdoctor.debug.xcconfig"; path = "Target Support Files/Pods-dietdoctor/Pods-dietdoctor.debug.xcconfig"; sourceTree = "<group>"; };
 		7CF667DE2651DEFC6C0EB7EB /* libPods-dietdoctor-dietdoctorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dietdoctor-dietdoctorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = dietdoctor/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,6 +139,8 @@
 		13B07FAE1A68108700A75B9A /* dietdoctor */ = {
 			isa = PBXGroup;
 			children = (
+				3E7B719725362BF30097D54F /* diet_doctor.png */,
+				3E7B719925362C8C0097D54F /* diet.png */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -137,6 +150,10 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				3E6C9EDB2534BCFB003CD722 /* NutritionViewController.swift */,
 				3E6C9EDA2534BCFB003CD722 /* dietdoctor-Bridging-Header.h */,
+				3E7B7192253623AA0097D54F /* ReactBridgeManager.h */,
+				3E7B7193253623AA0097D54F /* ReactBridgeManager.m */,
+				3E7B7195253624150097D54F /* DietChartViewController.swift */,
+				3E7B719B2536357C0097D54F /* DietDoctor.storyboard */,
 			);
 			name = dietdoctor;
 			sourceTree = "<group>";
@@ -352,7 +369,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E7B719A25362C8C0097D54F /* diet.png in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				3E7B719C2536357C0097D54F /* DietDoctor.storyboard in Resources */,
+				3E7B719825362BF30097D54F /* diet_doctor.png in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,8 +664,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E7B7196253624150097D54F /* DietChartViewController.swift in Sources */,
 				3E6C9EDC2534BCFB003CD722 /* NutritionViewController.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				3E7B7194253623AA0097D54F /* ReactBridgeManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

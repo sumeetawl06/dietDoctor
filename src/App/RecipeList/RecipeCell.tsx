@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import {FlatList, Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {FlatList, Image, ImageBackground, NativeModules, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Icon, SearchBar} from 'react-native-elements';
 import StarRating from '../StarRating/star-rating';
 import {assertLeafType} from 'graphql';
 import ImageLoad from 'react-native-image-placeholder';
+
 
 export function RecipeCell(props) {
 
@@ -13,6 +14,7 @@ export function RecipeCell(props) {
         ratings: 3,
         views: 34000
     }
+    const { ReactBridgeManager } = NativeModules
 
     function getStars(rating) {
         let stars = [];
@@ -37,35 +39,41 @@ export function RecipeCell(props) {
             style={ styles.container }
         >
             <ImageLoad
-                source={{uri: 'https://i.dietdoctor.com'+data.images.hz}}
+                source={ data.images ? {uri: 'https://i.dietdoctor.com'+data.images.hz} : require('./dish1.png')}
                 style={{
+                    zIndex: 0,
                     width: '100%',
                     height: '100%',
                     alignSelf: 'center',
                 }}
-            />
-            <TouchableOpacity
-                onPress={() => {
-                    alert('buttonTapped')
-                }}>
-                <View
-                    style={{
-                        top: 10,
-                        right: 10,
-                        position: 'absolute',
-                        zIndex: 200,
-                        width: 50,
-                        height: 50,
-                        alignItems: 'center',
-                        justifyContent: 'center',}}
-                >
-                    <Icon
-                        name={'favorite-border'}
-                        color={'white'}
-                        size={30}
-                    />
-                </View>
-            </TouchableOpacity>
+            >
+                <TouchableOpacity
+                    onPress={() => {
+                        ReactBridgeManager.navigateToNativeModule()
+                        ReactBridgeManager.getSystemLanguage( (lang) => {
+                            alert(lang)
+                        })
+                    }}>
+                    <View
+                        style={{
+                            top: 10,
+                            right: 10,
+                            position: 'absolute',
+                            zIndex: 1000,
+                            width: 50,
+                            height: 50,
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <Icon
+                            name={'favorite-border'}
+                            color={'white'}
+                            size={30}
+                        />
+                    </View>
+                </TouchableOpacity>
+            </ImageLoad>
             <View
                 style={{
                     position: 'absolute',

@@ -31,6 +31,7 @@ static void InitializeFlipper(UIApplication *application) {
   InitializeFlipper(application);
 #endif
 
+  
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"dietdoctor"
@@ -39,10 +40,14 @@ static void InitializeFlipper(UIApplication *application) {
   rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
 
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  UIViewController *rootViewController = [UIViewController new];
+  UIViewController *rootViewController = [[UIViewController alloc] init];
   rootViewController.view = rootView;
-  self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+  
+  self.rootNavigationController = [[UINavigationController alloc]initWithRootViewController:rootViewController];
+  self.rootNavigationController.navigationBarHidden = YES;
+  self.window.rootViewController = self.rootNavigationController;
   [self.window makeKeyAndVisible];
+
   return YES;
 }
 
